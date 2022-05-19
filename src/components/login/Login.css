@@ -1,0 +1,38 @@
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.formItem{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+.title{
+    color: #2487ce;
+    margin: 0 20px;
+}
+  
+.btn-login {
+    font-size: 30px;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+    color: #16507b;
+    width: 300px;
+    align-self: center  ;
+}
+  
+.textF{
+    width: 400px;
+}
+  .logon a{
+      font-size: 100px;
+      color:#2487ce;
+  }
+  .logon img{
+    max-height: 100px;
+  }

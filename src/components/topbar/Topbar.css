@@ -1,0 +1,99 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #2487ce;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #469fdf;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+.topbar {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0.125rem 0.25rem rgb(0, 0, 0, 0.075);
+  background-color: white;
+}
+
+.topbarWrapper {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topLeft {
+  display: flex;
+  flex-direction: row;
+}
+.textLogo {
+  font-size: 28px;
+  margin: 20px;
+  padding: 0;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.topbarIcons {
+  position: relative;
+  display: flex;
+}
+.topiconBadges {
+  position: absolute;
+}
+.btn-logout {
+  height: 38px;
+  padding: 8px 28px;
+  border-radius: 5px;
+  margin-left: 16px;
+  background-color: #2487ce;
+  border: 1px solid #2487ce;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-logout:hover,
+.btn-logout:active {
+  outline: none;
+  box-shadow: unset;
+}
+.wrap-icon {
+  border: 1px solid #2487ce;
+  border-radius: 5px;
+  padding: 4px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  margin-right: 6px;
+  box-shadow: 0 0.125rem 0.25rem rgb(0, 0, 0, 0.075);
+}
+.wrap-icon:last-child {
+  margin-right: 0;
+}
+.wrap-icon:hover {
+  background-color: rgb(36, 135, 206, 0.1);
+  color: white;
+}
+.wrap-icon svg {
+  color: #2487ce;
+  margin: auto;
+}

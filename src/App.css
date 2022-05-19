@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex: 1;
+}
+.App {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.wrap-content {
+  padding: 16px;
+  flex: 1;
+  min-width: 0;
+}
+html,
+body {
+  margin: 0;
+}

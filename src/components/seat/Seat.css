@@ -1,0 +1,40 @@
+.logo img {
+    width: 200px;
+    object-fit: contain;
+
+  
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+.homeContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+.searchBar{
+    width: 80%;
+    margin-left: 20px;
+}
+
+.movieCard{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 50px;
+    margin: 20px;
+    
+}
+.movies{
+    display: flex;
+}
+.seatCard{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    flex: 1;
+    border: 4px solid rgba(0, 0, 0, 0.12)
+}
