@@ -65,9 +65,9 @@ export default function Home() {
                       let api = `http://localhost:3000/api/movies?title=${searchtext}`
                        await axios.get(api,config).then(async res=>{
                         if (res.data){
-                            let result = [];
-                            result.push(res.data.data)
-                                setData(result);
+                            // let result = [];
+                            // result.push(res.data.data)
+                                setData(res.data.data);
                         }
                     }).catch(err =>{
                         setMounted(false);

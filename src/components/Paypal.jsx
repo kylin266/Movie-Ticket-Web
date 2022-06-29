@@ -14,6 +14,8 @@ export default function Paypal({ seats, movePlayTime }) {
         };
         let ticketApi = "http://localhost:3000/api/tickets/create"
         let paymentApi = "http://localhost:3000/api/payments/create"
+        let grossApi = "http://localhost:9000/api/gross/put"
+        
         window.paypal
             .Buttons({
                 createOrder: (data, actions, err) => {
@@ -63,13 +65,32 @@ export default function Paypal({ seats, movePlayTime }) {
                         "transactionId": order.id,
                         "paymentMethod": "paypal"
                     }
-                    await axios.post(paymentApi, dataPayment, config).then(res => {
-                        if (res.data) {
-                           alert("payment success");
-                        }
-                    }).catch(err => {
-                        alert(err);
+                    let movieApi = `http://localhost:3000/api/movies/${movePlayTime.movieId}`
+                    await axios.get(movieApi,config).then(async movie =>{
+                         movie = movie.data.data;
+                         console.log(movie);
+                        await axios.post(paymentApi, dataPayment, config).then(async res => {
+                            if (res.data) {
+                                await axios.put(grossApi, {
+                                    tickets: tickets.length,
+                                    revenue: dataPayment.amount,
+                                    title: movie.title
+                                }, config).then(result => {
+                                    if (result.data) {
+                                       alert("payment success");
+                                       
+                                    }
+                                }).catch(err => {
+                                    alert(err);
+                                })
+                               alert("payment success");
+                               
+                            }
+                        }).catch(err => {
+                            alert(err);
+                        })
                     })
+                     
                 },
                 onError: (err) => {
                     console.log(err);
